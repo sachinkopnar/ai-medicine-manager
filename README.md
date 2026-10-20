@@ -1,163 +1,213 @@
-💊 AI Medicine Manager
+# 💊 AI Medicine Manager
 
-A smart, AI-powered medicine management system built with Python and Streamlit. It helps users and their families manage daily medicines, get dose reminders, scan prescriptions with OCR, track adherence, and generate reports, all in one place.
+A smart AI-powered Medicine Management System built using **Python** and **Streamlit** that helps users manage daily medicines, track adherence, scan prescriptions using OCR, and visualize health analytics — all in one place.
 
-🚀 Live Demo
+---
 
-🔗 https://YOUR-APP-NAME.streamlit.app
+## 🚀 Live Demo
 
-Data on the hosted demo is stored in server files and resets when the app restarts. Create a fresh account when you try it.
+🔗 **Hugging Face Space**
 
-🧠 Overview
+https://huggingface.co/spaces/bhavyamanashwi/medicine_manager
 
-AI Medicine Manager combines:
+---
 
-✅ Multiple patient and family profiles under one account
-✅ Smart medicine scheduling with dose tracking
-✅ Alarm-style dosage reminders
-✅ OCR-based prescription scanning with AI parsing
-✅ AI medicine assistant (chatbot)
-✅ Automatic PDF medication reports
-✅ Low-stock alerts and appointment tracking
-✅ Adherence analytics and visual dashboards
-✨ Features
-👤 User Authentication
-Secure login and signup
-Password hashing using SHA-256
-Crash-safe data saving (atomic file writes), so records are not corrupted if the app closes mid-save
-👨‍👩‍👧 Multiple Patient / Family Profiles
-One account can manage Self, Father, Mother, Spouse, children, and more
-Each profile has its own medicines, schedule, dose history, stock, and appointments
-Profile switcher in the sidebar and a Manage Profiles page (add, edit, delete)
-💊 Medicine Management
-Add, edit, and delete medicines with dosage, frequency, timings, notes, and start/end dates
-Mark doses as taken, with undo
-Duplicate medicine detection and overdose-risk warnings
-AI-based drug interaction check in My Medicines
-🔔 Dosage Reminders
-Due Now banner on the Dashboard with one-tap Taken button
-Browser desktop notifications with an alarm-style sound (stay on screen until dismissed)
-Settings page: enable/disable, sound, alert window (minutes before a dose), check interval
-Automatic periodic checks without logging the user out
+# 🧠 Overview
 
-Browser notifications work while the app tab is open in the browser.
+AI Medicine Manager simplifies medication tracking by combining:
 
-📦 Low Stock Alerts
-Optional stock tracking per medicine
-Stock counts down automatically when a dose is marked taken (and restores on undo)
-Dashboard Low Stock banner with a quick Restock button
-Stock shown in My Medicines and in the PDF report
-📅 Appointment Tracker
-Add, edit, and delete doctor or clinic appointments per profile
-Upcoming and past appointment lists
-Next Appointment highlight card on the Dashboard
-📑 Automatic Medication Report (PDF)
-One-click downloadable PDF for the active profile
-Includes patient info, current medicines (with stock), today's adherence summary, and 7-day history
-Handy to bring to a doctor's visit
-🧾 OCR Prescription Scanner
-Upload a prescription image and extract medicine details using OCR
-AI enhancement parses the text and auto-fills the Add Medicine form
-🤖 AI Medicine Assistant
-Ask questions such as "what is this medicine for?"
-Uses the active profile's medicine list as context
-Supports multiple AI providers: Groq, OpenAI, Anthropic, Gemini, and Ollama (local)
-📊 Analytics Dashboard
-Today's taken, missed, and pending doses
-Adherence percentage and dose history charts (Matplotlib)
-🎨 Interface
-Dark and light themes
-Multi-language UI: English, Hindi, Telugu
-⚙️ Tech Stack
-Area	Technology
-Language	Python 3.9+
-App framework	Streamlit
-Data handling	Pandas, JSON storage
-OCR	pytesseract, Pillow
-Charts	Matplotlib
-PDF reports	ReportLab
-Auto-refresh	streamlit-autorefresh
-AI providers	Groq, OpenAI, Anthropic, Gemini, Ollama
-Deployment	Streamlit Community Cloud
-🏗️ Project Structure
-medicine_manager-main/
+* ✅ Smart medicine scheduling
+* ✅ Daily reminders dashboard
+* ✅ OCR-based prescription scanning
+* ✅ User authentication system
+* ✅ Health analytics and adherence tracking
+
+Built entirely with Python and deployed on Hugging Face Spaces for easy accessibility.
+
+---
+
+# ⚙️ Tech Stack
+
+## 🐍 Core Technology
+
+* Python 3.10+
+
+## 🖥️ Frontend & Backend
+
+* Streamlit
+
+## 📊 Data Handling
+
+* Pandas
+* JSON Storage
+
+## 🧾 OCR (Prescription Scanning)
+
+* pytesseract
+* Pillow
+
+## 📈 Data Visualization
+
+* Matplotlib
+
+## ☁️ Deployment
+
+* Hugging Face Spaces
+
+---
+
+# ✨ Features
+
+## 👤 User Authentication
+
+* Secure Login and Signup
+* Password hashing using SHA-256
+* User-specific medicine records
+
+---
+
+## 💊 Medicine Management
+
+Users can:
+
+* Add medicines
+* Specify dosage
+* Set medicine timings
+* Track daily medication history
+* Mark medicines as taken
+* View pending doses
+
+---
+
+## 📅 Smart Dashboard
+
+* Today's medicine schedule
+* Real-time updates using Streamlit session state
+* Taken vs Pending status
+
+---
+
+## 🧾 OCR Prescription Scanner
+
+Upload prescription images and automatically extract medicine information using OCR.
+
+### Benefits
+
+* Digitizes prescriptions
+* Reduces manual entry
+* Improves medication organization
+
+---
+
+## 📊 Analytics Dashboard
+
+Visual insights into:
+
+* Medicines taken
+* Pending medicines
+* Daily adherence patterns
+
+Charts are generated using Matplotlib for easy interpretation.
+
+---
+
+## 🧠 AI-Inspired Smart Logic
+
+The system includes intelligent rule-based features:
+
+* Duplicate medicine detection
+* Missed dose tracking
+* Safety-oriented awareness checks
+
+---
+
+# 🏗️ Project Structure
+
+```text
+AI_MEDICINE_MANAGER_ENHANCED/
 │
-├── app.py              # Main Streamlit application and all pages
-├── auth.py             # Login / signup and password hashing
-├── profiles.py         # Family / patient profile management
-├── medicine.py         # Medicines, dose log, stock, analytics logic
-├── reminders.py        # Due-now dose detection for reminders
-├── appointments.py     # Doctor appointment tracker
-├── reports.py          # PDF medication report generator
-├── ocr.py              # Prescription OCR module
-├── ai_backend.py       # AI providers (chat, OCR parsing, interactions)
-├── theme.py            # Dark / light theme
-├── languages.py        # Multi-language text
-├── utils.py            # Helper functions
-├── requirements.txt    # Python dependencies
-├── packages.txt        # System packages (Tesseract OCR) for hosting
+├── app.py                 # Main Streamlit application
+├── auth.py                # Authentication system
+├── medicine.py            # Medicine management logic
+├── ocr.py                 # Prescription OCR module
+├── utils.py               # Helper functions
+├── requirements.txt
 │
-└── data/               # Created automatically at runtime (not uploaded to Git)
-🚀 Running Locally
+└── data/
+    ├── users.json
+    └── medicines.json
+```
 
-1. Clone the repository
+---
 
-git clone https://github.com/<your-github-username>/ai-medicine-manager.git
-cd ai-medicine-manager
+# 🚀 Running Locally
 
-2. Install dependencies
+## 1️⃣ Clone the Repository
+
+git clone https://github.com/bhavya_manashwi/Medicine_Manager.git
+
+
+cd Medicine_Manager
+
+
+## 2️⃣ Install Dependencies
 
 pip install -r requirements.txt
 
-On Windows, if pip is not recognized, use:
 
-py -m pip install -r requirements.txt
-
-3. Run the app
+## 3️⃣ Run the Application
 
 python -m streamlit run app.py
 
-On Windows you can also use py -m streamlit run app.py. The app opens at http://localhost:8501.
 
-4. (Optional) Enable the OCR scanner
+The application will open automatically in your browser at:
 
-Install the Tesseract OCR program on your computer. All other features work without it.
+http://localhost:8501
 
-5. (Optional) Enable AI features
 
-Add your API key in the app's AI Settings page, or set an environment variable such as GROQ_API_KEY.
+---
 
-☁️ Deployment
+# ☁️ Deployment
 
-The app is deployed on Streamlit Community Cloud from a public GitHub repository:
+The project is deployed using **Hugging Face Spaces (Streamlit SDK).**
 
-Push the project files to GitHub (do not upload the data/ folder or any .env file).
-Sign in at share.streamlit.io with GitHub and click Create app.
-Choose the repository, branch main, and main file app.py.
-In Advanced settings, choose Python 3.11 or 3.12 and, optionally, add GROQ_API_KEY = "your-key" under Secrets.
-Click Deploy.
-📌 Future Improvements
-📤 CSV / Excel export of medicine and dose history
-📈 Advanced analytics (weekly and monthly trends, adherence streaks)
-💾 Data backup and restore
-📧 Email reminders
-📱 WhatsApp notifications
-🗄️ Migration from JSON to SQLite
-📲 Improved mobile responsiveness
-⚠️ Disclaimer
+### Live Application
 
-This project is developed for educational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment.
+https://huggingface.co/spaces/bhavyamanashwi/medicine_manager
 
-👨‍💻 Authors
+---
 
-Bhavya Manashwi
+# 📌 Future Improvements
 
-AI Developer
-Python and Streamlit Enthusiast
+* 📧 Email reminders
+* 📱 WhatsApp notifications
+* 💊 AI-based drug interaction detection
+* 🗄️ Migration from JSON to SQLite
+* 📊 Advanced health analytics
+* 📲 Improved mobile responsiveness
+* 🌐 Multi-language support (Indian languages)
 
-Sachin Kopnar
+---
 
-Project Collaborator: Family Profiles, Dosage Reminders, PDF Medication Reports, Low Stock Alerts, Appointment Tracker, and deployment
-⭐ Support
+# ⚠️ Disclaimer
 
-If you found this project useful, consider giving it a star on GitHub.
+This project is developed for **educational purposes only** and should not be considered a substitute for professional medical advice, diagnosis, or treatment.
+
+---
+
+# 👨‍💻 Authors
+
+### Bhavya Manashwi
+
+* AI Developer
+* Python & Streamlit Enthusiast
+
+### Sachin Kopnar
+
+* Project Collaborator
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a **star ⭐** and sharing it with others!
