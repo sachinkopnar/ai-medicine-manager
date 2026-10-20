@@ -1,10 +1,17 @@
 💊 AI Medicine Manager
+
 A smart, AI-powered medicine management system built with Python and Streamlit. It helps users and their families manage daily medicines, get dose reminders, scan prescriptions with OCR, track adherence, and generate reports, all in one place.
+
 🚀 Live Demo
+
 🔗 https://YOUR-APP-NAME.streamlit.app
-> Data on the hosted demo is stored in server files and resets when the app restarts. Create a fresh account when you try it.
+
+Data on the hosted demo is stored in server files and resets when the app restarts. Create a fresh account when you try it.
+
 🧠 Overview
+
 AI Medicine Manager combines:
+
 ✅ Multiple patient and family profiles under one account
 ✅ Smart medicine scheduling with dose tracking
 ✅ Alarm-style dosage reminders
@@ -32,7 +39,9 @@ Due Now banner on the Dashboard with one-tap Taken button
 Browser desktop notifications with an alarm-style sound (stay on screen until dismissed)
 Settings page: enable/disable, sound, alert window (minutes before a dose), check interval
 Automatic periodic checks without logging the user out
-> Browser notifications work while the app tab is open in the browser.
+
+Browser notifications work while the app tab is open in the browser.
+
 📦 Low Stock Alerts
 Optional stock tracking per medicine
 Stock counts down automatically when a dose is marked taken (and restores on undo)
@@ -71,7 +80,6 @@ Auto-refresh	streamlit-autorefresh
 AI providers	Groq, OpenAI, Anthropic, Gemini, Ollama
 Deployment	Streamlit Community Cloud
 🏗️ Project Structure
-```
 medicine_manager-main/
 │
 ├── app.py              # Main Streamlit application and all pages
@@ -90,36 +98,43 @@ medicine_manager-main/
 ├── packages.txt        # System packages (Tesseract OCR) for hosting
 │
 └── data/               # Created automatically at runtime (not uploaded to Git)
-```
 🚀 Running Locally
+
 1. Clone the repository
-```
+
 git clone https://github.com/<your-github-username>/ai-medicine-manager.git
 cd ai-medicine-manager
-```
+
 2. Install dependencies
-```
+
 pip install -r requirements.txt
-```
-On Windows, if `pip` is not recognized, use:
-```
+
+On Windows, if pip is not recognized, use:
+
 py -m pip install -r requirements.txt
-```
+
 3. Run the app
-```
+
 python -m streamlit run app.py
-```
-On Windows you can also use `py -m streamlit run app.py`. The app opens at `http://localhost:8501`.
+
+On Windows you can also use py -m streamlit run app.py. The app opens at http://localhost:8501.
+
 4. (Optional) Enable the OCR scanner
+
 Install the Tesseract OCR program on your computer. All other features work without it.
+
 5. (Optional) Enable AI features
-Add your API key in the app's AI Settings page, or set an environment variable such as `GROQ_API_KEY`.
+
+Add your API key in the app's AI Settings page, or set an environment variable such as GROQ_API_KEY.
+
 ☁️ Deployment
+
 The app is deployed on Streamlit Community Cloud from a public GitHub repository:
-Push the project files to GitHub (do not upload the `data/` folder or any `.env` file).
+
+Push the project files to GitHub (do not upload the data/ folder or any .env file).
 Sign in at share.streamlit.io with GitHub and click Create app.
-Choose the repository, branch `main`, and main file `app.py`.
-In Advanced settings, choose Python 3.11 or 3.12 and, optionally, add `GROQ_API_KEY = "your-key"` under Secrets.
+Choose the repository, branch main, and main file app.py.
+In Advanced settings, choose Python 3.11 or 3.12 and, optionally, add GROQ_API_KEY = "your-key" under Secrets.
 Click Deploy.
 📌 Future Improvements
 📤 CSV / Excel export of medicine and dose history
@@ -130,12 +145,19 @@ Click Deploy.
 🗄️ Migration from JSON to SQLite
 📲 Improved mobile responsiveness
 ⚠️ Disclaimer
+
 This project is developed for educational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment.
+
 👨‍💻 Authors
+
 Bhavya Manashwi
+
 AI Developer
 Python and Streamlit Enthusiast
+
 Sachin Kopnar
+
 Project Collaborator: Family Profiles, Dosage Reminders, PDF Medication Reports, Low Stock Alerts, Appointment Tracker, and deployment
 ⭐ Support
+
 If you found this project useful, consider giving it a star on GitHub.
