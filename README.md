@@ -4,7 +4,7 @@ A smart, AI-powered medicine management system built with **Python and Streamlit
 
 ## 🚀 Live Demo
 
-🔗 **https://YOUR-APP-NAME.streamlit.app**
+🔗 **https://ai-medicine-manager-buhqz3squteavbpj6reji8.streamlit.app/**
 
 > Data on the hosted demo is stored in server files and resets when the app restarts. Create a fresh account when you try it.
 
