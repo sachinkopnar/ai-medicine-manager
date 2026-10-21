@@ -122,7 +122,7 @@ medicine_manager-main/
 **1. Clone the repository**
 
 ```
-git clone https://github.com/sachinkopnar/ai-medicine-manager.git
+https://github.com/sachinkopnar/ai-medicine-manager.git
 ```
 
 **2. Install dependencies**
